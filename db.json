@@ -1,20 +1,26 @@
 {
   "products": [
     {
+      "name": "bùi hồng hạnh",
+      "price": "544",
+      "categorieId": 2,
+      "id": 5
+    },
+    {
+      "name": "bùi hồng hạnh",
+      "price": "56",
       "categorieId": 1,
-      "name": "haha",
-      "price": "43",
-      "id": 3
+      "id": 6
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "quần"
+      "name": "shose"
     },
     {
       "id": 2,
-      "name": "áo"
+      "name": "t -shirt"
     }
   ]
 }

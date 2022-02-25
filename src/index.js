@@ -1,57 +1,53 @@
+import toastr from "toastr";
+import { getCateAll, remove } from "./api/products";
+import "toastr/build/toastr.min.css";
 /* eslint-disable linebreak-style */
-import axios from "axios";
-
-/* eslint-disable linebreak-style */
-const listProducts = {
+const listProduct = {
     async render() {
-        const { data } = await axios.get("http://localhost:3002/products?_expand=categorie");
+        const { data } = await getCateAll();
         return /* html */`
         <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">MÃ SẢN PHẨM </th>
-            <th scope="col">TÊN SẢN PHẨM</th>
-            <th scope="col">GIÁ SẢN PHẨM</th>
-            <th scope="col">Danh Mục</th>
-          </tr>
-        </thead>
+            <thead>
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">NAME</th>
+                <th scope="col">PRICE</th>
+                <th scope="col">CATEGORIES</th>
+              
+                </tr>
+            </thead>
         <tbody>
         ${data.map((product) => `
-        
-        <tr class="row-${product.id}">
-          <td>${product.id}</td>
-          <td>${product.name}</td>
-          <td>${product.price}</td>
-          <td>${product.categorie.name}</td>
-          <td>  <a href="/#/edit/product${product.id}" class="btn btn-warning">edit</a></td>
-          <td><button type="button" data-id=${product.id} class="btn btn-danger btns">xóa</button></td>
-        </tr>
-       
-        `).join("")}
-          
+            <tr class="row-${product.id}">
+              
+                <td>${product.id}</td>
+                <td>${product.name}</td>
+                <td>${product.price}</td>
+                <td>${product.categorie.name}</td>
+                <td> <a href="/#/edit/product${product.id}" class="btn btn-warning">edit</a></td>
+                <td><button type="button" data-id=${product.id} class="btn btn-danger btns">delete</button></td>
+            </tr>
+            
+            
+            `).join("")}
         </tbody>
-       
-      </table>
-      <a href="/#/add/product" class="btn btn-success">thêm sản phẩm</a>
+    </table>
+    <a href="/#/add/product" class="btn btn-success">Add Product</a>
         `;
     },
     afterRender() {
         const buttons = document.querySelectorAll(".btns");
         buttons.forEach((btn) => {
             const { id } = btn.dataset;
-            // console.log(id);
             btn.addEventListener("click", () => {
-                const confirm = window.confirm("bạn có chắc chắn muốn xóa");
-                if (confirm == true) {
-                    const removeItem = document.querySelector(`.row-${id}`);
-                    removeItem.parentNode.removeChild(removeItem);
-                    axios({
-                        url: `http://localhost:3002/products/${id}`,
-                        method: "DELETE",
+                const confirm = window.confirm("ban co chac chan xoa");
+                if (confirm) {
+                    remove(id).then(() => {
+                        toastr.success("ban da xoa thanh cong");
                     });
                 }
             });
         });
     },
 };
-export default listProducts;
+export default listProduct;
