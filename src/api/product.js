@@ -3,22 +3,22 @@
 import instance from "./instance";
 
 export const getAll = () => {
-    const url = "/post";
+    const url = "/products";
     return instance.get(url);
 };
 export const get = (id) => {
-    const url = `/post/${id}`;
+    const url = "/products";
     return instance.get(url);
 };
 export const add = (post) => {
-    const url = `/post`;
+    const url = "/products";
     return instance.post(url, post);
 };
-export const remove = (id) => {
-    const url = `/post/${id}`;
-    return instance.delete(url);
-};
 export const update = (post) => {
-    const url = `post/${post.id}`;
+    const url = "/products/${post,id}";
     return instance.put(url, post);
+};
+export const remove = (id) => {
+    const url = "/products/${id}";
+    return instance.delete(url);
 };

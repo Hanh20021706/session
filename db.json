@@ -1,91 +1,20 @@
 {
-  "post": [
+  "products": [
     {
-      "id": "7",
-      "title": "Mới update",
-      "img": "http://placeimg.com/640/480/business",
-      "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart"
-    },
-    {
-      "createdAt": "2022-01-15T01:54:24.955Z",
-      "title": "Tiffany Wisoky",
-      "img": "http://placeimg.com/640/480/cats",
-      "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
-      "id": "8"
-    },
-    {
-      "id": "9",
-      "title": "Mr. rgtregerger",
-      "img": "http://placeimg.com/640/480/nature",
-      "desc": "The Football Is Good For Training And Recreational Purposes"
-    },
-    {
-      "createdAt": "2022-01-14T12:38:27.738Z",
-      "title": "bài viết này được đổi",
-      "img": "http://placeimg.com/640/480/nature",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": "10"
-    },
-    {
-      "createdAt": "2022-01-14T17:58:26.446Z",
-      "title": "Vickie Jast",
-      "img": "http://placeimg.com/640/480/technics",
-      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
-      "id": "11"
-    },
-    {
-      "createdAt": "2022-01-15T02:21:11.908Z",
-      "title": "Mrs. Drew Farrell",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
-      "id": "13"
-    },
-    {
-      "createdAt": "2022-01-14T11:14:02.843Z",
-      "title": "Lorena Cole",
-      "img": "http://placeimg.com/640/480/technics",
-      "desc": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
-      "id": "14"
-    },
-    {
-      "createdAt": "2022-01-15T00:11:58.958Z",
-      "title": "Vừa sửa",
-      "img": "http://placeimg.com/640/480/technics",
-      "desc": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
-      "id": "15"
-    },
-    {
-      "createdAt": "2022-01-10T20:33:27.477Z",
-      "title": "Yolanda Roob",
-      "img": "http://placeimg.com/640/480/sports",
-      "desc": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
-      "id": "19"
+      "categorieId": 1,
+      "name": "haha",
+      "price": "43",
+      "id": 3
     }
   ],
-  "users": [
+  "categories": [
     {
-      "email": "hanh@gmail.com",
-      "password": "$2a$10$VokHtj3yelOXtKDXKec5M.a.yeBya5E3Gi807WnT4b3sR1MjiqCKO",
-      "username": "hanh",
-      "id": 1
+      "id": 1,
+      "name": "quần"
     },
     {
-      "email": "hanhbhph15007@fpt.edu.vn",
-      "password": "$2a$10$oWupTyY/lzuQlYsW1EJFC.7TtUlKjIPRbcBfqlPdnCoa2X6Cygykq",
-      "username": "hanh",
-      "id": 2
-    },
-    {
-      "email": "Tuilacanecau@hotmail.com",
-      "password": "$2a$10$zcp60WhVxxGTKzyMWjWwp.O8WSs1dTSp5edb3Jyg/Saa6XtGulRMy",
-      "username": "hanh",
-      "id": 3
-    },
-    {
-      "email": "hoa@gmail.com",
-      "password": "$2a$10$sfTq.3ZUrZOiXGOuyAQnsO.tMCpYP5BuRedmPsGiI47m1m1eAcIGu",
-      "username": "hoa",
-      "id": 4
+      "id": 2,
+      "name": "áo"
     }
   ]
 }

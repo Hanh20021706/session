@@ -1,10 +1,8 @@
 /* eslint-disable linebreak-style */
-import axios from "axios";
-
-const instance = axios.create({
+const instance = {
     baseURL: "http://localhost:3002",
-    headers: {
+    header: {
         "Content-Type": "application/json",
     },
-});
+};
 export default instance;
